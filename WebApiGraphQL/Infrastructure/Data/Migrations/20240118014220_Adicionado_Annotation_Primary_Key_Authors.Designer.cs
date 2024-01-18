@@ -2,18 +2,21 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using WebApiGraphQL.Infrastructure;
 
 #nullable disable
 
-namespace WebApiGraphQL.Migrations
+namespace WebApiGraphQL.Infrastructure.Data.Migrations
 {
     [DbContext(typeof(AppContextClass))]
-    partial class AppContextClassModelSnapshot : ModelSnapshot
+    [Migration("20240118014220_Adicionado_Annotation_Primary_Key_Authors")]
+    partial class Adicionado_Annotation_Primary_Key_Authors
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
